@@ -100,7 +100,7 @@
         try {
             // Request access to the camera with the specified facing mode
             const stream = await navigator.mediaDevices.getUserMedia({
-                video: { mode }
+                video: { facingMode }
             });
 
             const videoElement = document.getElementById('video');
@@ -140,7 +140,7 @@
     // }
 
     document.addEventListener("DOMContentLoaded", function() {
-        startVideo(camera_mode);
+        startVideo(mode);
         startPredicting();
     });
 </script>
