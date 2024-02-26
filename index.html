@@ -72,8 +72,8 @@
         "Banana | Value per 100g | Cal - 89 | Carbohydrates - 23g | Fat - 0.3g |  Protein - 1.1g",
     ];
     const MODEL_FOLDER = 'model/model.json';
-    // const mode = 'environment' // back camera
-    const camera_mode = 'user' // front camera
+    const mode = 'environment' // back camera
+    //const mode = 'user' // front camera
 
     let currentStream;
 
@@ -89,7 +89,7 @@
     ////////////////////////////////
     ////////    VIDEO CAPTURE AND PREDICTION LOGIC
     ////////////////////////////////
-    async function startVideo(facingMode = 'user') {
+    async function startVideo(facingMode = mode) {
         // Stop any existing video tracks to free up the camera
         if (currentStream) {
             currentStream.getTracks().forEach(track => {
